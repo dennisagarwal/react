@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ButtonContext from '../Context/ButtonContext';
+import UserContext from '../Context/UserContext';
 
 class Navigation extends Component {
    
@@ -11,6 +12,11 @@ class Navigation extends Component {
                         return <a href='#'>{value}</a>
                     }}
                 </ButtonContext.Consumer>
+                <UserContext.Consumer>
+                    {(userValue) => {
+                        return <div>{userValue.greet()}</div>;
+                    }}
+                </UserContext.Consumer>
             </div>
         );
     }
