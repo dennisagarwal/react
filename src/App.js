@@ -1,6 +1,7 @@
 import "./App.css";
 import AddPost from "./components/AddPost/AddPost";
 import Button from "./components/Button/Button";
+import Category from "./components/Category/Category";
 import ButtonContext from "./components/Context/ButtonContext";
 import UserContext from "./components/Context/UserContext";
 import HelloWorld from "./components/HelloWorld/HelloWorld";
@@ -23,6 +24,7 @@ function App() {
       </ButtonContext.Provider>
       <Button name="Button Name" />
       <HelloWorld text="Hello World Text" />
+      <Category/>
       <Posts />
       <AddPost></AddPost>
     </div>
