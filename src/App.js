@@ -6,6 +6,7 @@ import ButtonContext from "./components/Context/ButtonContext";
 import UserContext from "./components/Context/UserContext";
 import HelloWorld from "./components/HelloWorld/HelloWorld";
 import Posts from "./components/Posts/Posts";
+import ParentRefTextInput from "./components/RefTextInput/ParentRefTextInput";
 import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Button name="Button Name" />
       <HelloWorld text="Hello World Text" />
       <Category/>
+      <ParentRefTextInput/>
       <Posts />
       <AddPost></AddPost>
     </div>
