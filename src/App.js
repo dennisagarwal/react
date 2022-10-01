@@ -1,16 +1,30 @@
-import './App.css';
-import AddPost from './components/AddPost/AddPost';
-import Button from './components/Button/Button';
-import HelloWorld from './components/HelloWorld/HelloWorld';
-import Posts from './components/Posts/Posts';
+import "./App.css";
+import AddPost from "./components/AddPost/AddPost";
+import Button from "./components/Button/Button";
+import ButtonContext from "./components/Context/ButtonContext";
+import UserContext from "./components/Context/UserContext";
+import HelloWorld from "./components/HelloWorld/HelloWorld";
+import Posts from "./components/Posts/Posts";
+import Sidebar from "./components/Sidebar/Sidebar";
 
 function App() {
+  let userData = {
+    name: "Leela",
+    greet: function () {
+      return "hello " + this.name;
+    },
+  };
   return (
     <div className="App">
-   <Button name="Button Name"/>
-   <HelloWorld text="Hello World Text"/>
-   <Posts/>
-   <AddPost></AddPost>
+      <ButtonContext.Provider value="Leela web dev context">
+        <UserContext.Provider value={userData}>
+          <Sidebar/>
+        </UserContext.Provider>
+      </ButtonContext.Provider>
+      <Button name="Button Name" />
+      <HelloWorld text="Hello World Text" />
+      <Posts />
+      <AddPost></AddPost>
     </div>
   );
 }
